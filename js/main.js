@@ -121,3 +121,40 @@ tabsTitle2.forEach(item => item.addEventListener('click', event => {
     document.getElementById(tabsTitleTarget).classList.remove('hidden-tab-content');
 
 }));
+
+document.getElementById("open-modal-btn").addEventListener("click", function(){
+    document.getElementById("modal").classList.add("open")
+});
+
+document.getElementById("close-modal-btn").addEventListener("click", function(){
+    document.getElementById("modal").classList.remove("open")
+});
+
+document.getElementById("close-modal-2").addEventListener("click", function(){
+    document.getElementById("modal").classList.remove("open")
+});
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === "Escape") {
+      document.getElementById("modal").classList.remove("open")
+  }
+});
+
+document.querySelector("#modal .modal_box").addEventListener('click', event => {
+    event._isClickWithInModal = true;
+});
+
+document.getElementById("modal").addEventListener('click', event => {
+    if (event._isClickWithInModal) return;
+    event.currentTarget.classList.remove('open');
+});
+
+const ratingItemsList = document.querySelectorAll('.rating_item');
+const ratingItemsArray = Array.prototype.slice.call(ratingItemsList);
+
+document.querySelectorAll('.rating_item').forEach(item =>
+    item.addEventListener('click', () =>
+        item.parentNode.dataset.totalValue = item.dataset.itemValue
+    )
+
+);
