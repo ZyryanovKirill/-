@@ -116,7 +116,7 @@
 						</a>
 					</li>
 					<li class="menu__list-item">
-						<a class="menu__list-link menu__list-link--active" href="payment.html">
+						<a class="menu__list-link " href="payment.html">
 							ОПЛАТА И ДОСТАВКА
 						</a>
 					</li>
@@ -182,7 +182,7 @@
 					<a class="crumb-title crumb-title-catalog" href="catalog.html">Оформление заказа</a>
 				</div>
 				<h2 class="title--big">Оформление заказа</h2>
-				<div class="korzina_wrapper">
+				<div class="korzina_wrapper oform_super-wrapper">
 					<div class="oform_wrapper">
 						<h4 class="oform_title">Выберите способ получения</h4>
 						<div class="oform_sposob">
@@ -286,7 +286,15 @@
 							<input type="checkbox">
 							<span class="checkmark checkmark-mr">Нажимая на кнопку, вы даете согласие не обработку персональных данных</span>
 						</label>
-						<button class="final_btn">ОФОРМИТЬ ЗАКАЗ</button>
+						<button id="final_btn-1" class="final_btn">ОФОРМИТЬ ЗАКАЗ</button>
+						<div class="modal-2" id="modal-2">
+							<div class="modal_box-2">
+								<button class="close-modal" id="close-modal-btn-2">
+									<img src="img/icons/close-black.svg" alt="">
+								</button>
+								<h2 class="modal_title-2">Спасибо за покупку!</h2>
+							</div>
+						</div>
 					</div>
 					<div class="oform_summa">
 						<div class="oform_summa-tovarov-block">
@@ -328,7 +336,9 @@
 
 <script src="js/jquery-3.6.4.min.js"></script>
 <script src="js/slick.min.js"></script>
-<script src="js/main.js"></script>
+<script defer src="js/main.js"></script>
+<script defer src="js/popup.js"></script>
+
 
 </body>
 </html>
